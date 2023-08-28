@@ -1,5 +1,6 @@
 <script>
 import TheCardContent from './TheCardContent.vue';
+
 export default {
     components:{
         TheCardContent
@@ -30,7 +31,7 @@ export default {
 
 
     select{
-        width: 10%;
+        width: 15%;
     }
 
 </style>

@@ -2,11 +2,13 @@
 
 import TheHeader from './components/TheHeader.vue';
 import TheMain from './components/TheMain.vue';
+import TheCardContent from './components/TheCardContent.vue';
 
 export default{
     components:{
         TheHeader,
         TheMain,
+        TheCardContent,
     },
 }
 
@@ -21,7 +23,7 @@ export default{
     </body>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @use "../src/styles/partials/variables" as *;
 
 body{
