@@ -1,6 +1,6 @@
 <script>
 import TheCard from './TheCard.vue';
-import {store, fetchCards} from "../store"
+import {store, fetchCards, fetchArchetypes} from "../store"
 
 export default {
 
@@ -47,7 +47,8 @@ export default {
         <div class="row row-cols-5 g-4">
             <div class="col py-4" 
             v-for="singleCard in store.cards" :key="singleCard.id">
-                <TheCard :card="singleCard"></TheCard>
+                <TheCard 
+                :card="singleCard"></TheCard>
             </div>
         </div>
 
