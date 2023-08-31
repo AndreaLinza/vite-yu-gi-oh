@@ -1,6 +1,8 @@
 <script>
-import TheCard from './TheCard.vue';
-import {store, fetchCards, fetchArchetypes} from "../store"
+
+import {store, fetchCards, fetchArchetypes} from "../store";
+import TheCard from "./TheCard.vue";
+
 
 export default {
 
@@ -11,28 +13,16 @@ export default {
     data() {
         return {
             store
-            // cards: [],
-            // totCards:[],
-            // paginationInfo:{}
+
         }
     },
 
     methods: {
-        // fetchCards() {
-        //     const url = "https://db.ygoprodeck.com/api/v7/cardinfo.php?num=20&offset=0"
-
-        //     axios.get(url).then((response) => {
-
-                
-        //         this.cards = response.data.data;
-        //         this.paginationInfo = response.data.meta
-        //         this.totCards = response.data.meta.current_rows
-        //     })
-        // }
+        
     },
 
     mounted() {
-        fetchCards()
+
     }
 
 }
@@ -44,11 +34,10 @@ export default {
             <span>Found {{ store.totCards }} card</span>
         </div>
 
-        <div class="row row-cols-5 g-4">
+        <div class="row row-cols-lg-5 row-cols-md-3 row-cols-2 g-4">
             <div class="col py-4" 
             v-for="singleCard in store.cards" :key="singleCard.id">
-                <TheCard 
-                :card="singleCard"></TheCard>
+                <TheCard :card="singleCard"></TheCard>
             </div>
         </div>
 

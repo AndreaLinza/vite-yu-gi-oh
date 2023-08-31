@@ -18,7 +18,7 @@ export function fetchCards() {
         url = "https://db.ygoprodeck.com/api/v7/cardinfo.php?num=20&offset=0"
     }
     else {
-        url = "https://db.ygoprodeck.com/api/v7/cardinfo.php?archetype=${store.archetype}&num=20&offset=0"
+        url = `https://db.ygoprodeck.com/api/v7/cardinfo.php?archetype=${store.archetype}&num=20&offset=0`
     }
 
     axios.get(url).then((response) => {

@@ -1,5 +1,5 @@
 <script>
-import { store } from '../store';
+import { store, fetchArchetypes, fetchCards } from '../store';
 
 export default {
 
@@ -11,10 +11,14 @@ export default {
 
 
     methods:{
-        OnClick(){
+        fetchCards,
+        fetchArchetypes
+        
+    },
 
-            this.$emit("archetype", store.archetype)
-        }
+    mounted(){
+        fetchCards()
+        fetchArchetypes()
     }
 }
 
@@ -23,13 +27,13 @@ export default {
 
 <template>
     <select class="form-select" 
-    v-model="store.archetype">
+    v-model="store.archetype" @click="fetchCards">
         <option selected 
-        @click="OnClick" value="">Select archetype</option>
-        <option @click="OnClick" 
+        value="">Select archetype</option>
+        <option @click="fetchCards" 
         :value="archetype.archetype_name" 
-        v-for="archetype in store.archetypes"> {{
-            archetype.archetype_name }}</option>
+        v-for="archetype in store.archetypes"> 
+        {{ archetype.archetype_name }}</option>
 
     </select>
 </template>

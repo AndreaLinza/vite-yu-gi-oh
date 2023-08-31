@@ -4,7 +4,7 @@ import TheHeader from './components/TheHeader.vue';
 import TheMain from './components/TheMain.vue';
 import TheCardContent from './components/TheCardContent.vue';
 
-export default{
+export default {
     components:{
         TheHeader,
         TheMain,
@@ -15,8 +15,8 @@ export default{
 </script>
 
 <template>
-    <TheHeader></TheHeader>
     <body>
+        <TheHeader></TheHeader>
         
         <TheMain></TheMain>
         
