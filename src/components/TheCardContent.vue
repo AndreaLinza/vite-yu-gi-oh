@@ -1,6 +1,6 @@
 <script>
 
-import {store, fetchCards, fetchArchetypes} from "../store";
+import {store} from "../store";
 import TheCard from "./TheCard.vue";
 
 
